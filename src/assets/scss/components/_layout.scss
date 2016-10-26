@@ -1,0 +1,120 @@
+.container {
+	height:100%;
+}
+#hero {
+	background-image: url('../img/hero-2.jpg');
+	background-size: cover;
+	color: $white;
+
+	height: 90vh;
+	max-height: 100vw;
+
+	.after & {
+		// background: transparent;
+		// color: $black;
+	}
+
+	> .row {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 100%;
+		overflow: auto;
+	}
+
+	h1 {
+		font-size: 2rem;
+		line-height: 1;
+		margin:20px 0 0;
+		span {
+			display: block;
+			&.name-first {
+				font-family: $body-font-family;
+				text-transform: lowercase;
+				font-weight: 200;
+			}
+			&.name-last {
+				font-weight: bold;
+				font-size: 1.5em;
+				text-transform: uppercase;
+				line-height: .5em;
+				margin-bottom: .5em;
+			}
+		}
+	}
+
+	@include breakpoint(medium) {
+
+		h1 {
+			margin-top: 5px;
+			padding-left: map-get($grid-column-gutter, small) / 2;
+			font-size: 2.25rem;
+			float: right;
+			width: 90%;
+			// background-color: red;
+			.name-first {
+				padding-left:5px;
+			}
+			.after & {
+				// width: 40%
+			}
+		}
+
+		#intro {
+			padding-right: map-get($grid-column-gutter, small) / 2;
+			width: 60%;
+			// float: left;
+			text-align: right;
+			display: none;
+			// background-color:blue;
+			.after & {
+				// float: left;
+			}
+		}
+	}
+	@include breakpoint(large) {
+		h1 {
+			padding-left: map-get($grid-column-gutter, medium);
+			font-size: 3.5rem;
+			width: 40%;
+		}
+
+		#intro {
+			padding-right: map-get($grid-column-gutter, medium);
+			width: 60%;
+		}
+	}
+}
+
+#portfolio {
+	article {
+		text-align: center;
+		a {
+			// background-color: map-get($foundation-palette, primary);
+			display: block;
+			position: relative;
+
+			> span {
+				background-color: map-get($foundation-palette, secondary);
+				color: $white;
+				display: block;
+				opacity: .5;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+			}
+
+			&:hover, &:focus {
+				> span {
+					background-color: map-get($foundation-palette, primary);
+					opacity: .8;
+				}
+			}
+		}
+		img {
+			// opacity: .5;
+		}
+	}
+}
