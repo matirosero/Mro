@@ -38,10 +38,26 @@
 	font-size: 1.75rem;
 	line-height: 1;
 	// padding: 0rem 0 1rem; 0;
+	@include breakpoint(medium) {
+		font-size: 2rem;
+	}
+	@include breakpoint(large) {
+		font-size: 2.5rem;
+	}
 }
 
 .overlay-text {
 	color: map-get($foundation-palette, secondary);
 	font-size: 1.25rem;
 	@include text-like-header;
+
+	@include breakpoint(medium) {
+		font-size: 1.50rem;
+	}
+	@include breakpoint(medium) {
+		font-size: 3rem;
+	}
+	a:hover > .overlay > & {
+		color: $white;
+	}
 }

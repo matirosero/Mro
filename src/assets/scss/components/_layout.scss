@@ -45,11 +45,11 @@
 			background-position: center;
 			margin-top: 5px;
 			padding-left: map-get($grid-column-gutter, small) / 2;
-			
+
 			float: right;
 			width: 90%;
 			// background-color: red;
-			
+
 			.after & {
 				// width: 40%
 			}
@@ -59,7 +59,7 @@
 			padding-right: map-get($grid-column-gutter, small) / 2;
 			width: 60%;
 			// float: left;
-			
+
 			// background-color:blue;
 			.after & {
 				// float: left;
@@ -69,22 +69,22 @@
 	@include breakpoint(large) {
 		#site-title {
 			padding-left: map-get($grid-column-gutter, medium);
-			width: 40%;
+			width: 100%;
 		}
 
 		#intro {
 			padding-right: map-get($grid-column-gutter, medium);
-			width: 60%;
 		}
 	}
 }
 
 #portfolio {
 	.section-title {
-		
+
 	}
 	article {
 		text-align: center;
+		margin: 0 0 1px;
 		a {
 			// background-color: map-get($foundation-palette, primary);
 			display: block;
@@ -118,7 +118,14 @@
 			}
 		}
 		img {
-			opacity: .5;
+			// opacity: .5;
+		}
+		@include breakpoint(medium) {
+			margin: 0 0 1px;
+			padding-right: 1px;
+			&:last-child {
+				padding-right: 0;
+			}
 		}
 	}
 }
