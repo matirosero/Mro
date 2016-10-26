@@ -55,6 +55,7 @@ $foundation-palette: (
   warning: #ffae00,
   alert: #ec5840,
 );
+$light-purple: #E0D9E0;
 $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
@@ -125,7 +126,7 @@ $header-sizes: (
   ),
 );
 $header-color: inherit;
-$header-lineheight: 1.4;
+$header-lineheight: 1;//1.4;
 $header-margin-bottom: 0.5rem;
 $header-text-rendering: optimizeLegibility;
 $small-font-size: 80%;

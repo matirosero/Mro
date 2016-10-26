@@ -1,0 +1,47 @@
+#site-title {
+	font-size: 2rem;
+	line-height: 1;
+	.name-first {
+		font-family: $body-font-family;
+		text-transform: lowercase;
+		font-weight: 200;
+		padding-left: 3px;
+	}
+	.name-last {
+		font-weight: bold;
+		font-size: 1.5em;
+		text-transform: uppercase;
+		line-height: .5em;
+		margin-bottom: .5em;
+	}
+
+	@include breakpoint(medium) {
+		font-size: 2.25rem;
+		.name-first {
+			padding-left:5px;
+		}
+	}
+
+	@include breakpoint(large) {
+		font-size: 3.5rem;
+	}
+}
+
+#intro {
+	@include breakpoint(medium) {
+		text-align: right;
+	}
+}
+
+.section-title {
+	text-align: center;
+	font-size: 1.75rem;
+	line-height: 1;
+	// padding: 0rem 0 1rem; 0;
+}
+
+.overlay-text {
+	color: map-get($foundation-palette, secondary);
+	font-size: 1.25rem;
+	@include text-like-header;
+}

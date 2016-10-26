@@ -7,3 +7,15 @@
 		padding: $vpadding map-get($grid-column-gutter, large);
 	}
 }
+
+@mixin center-text-vertically {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100%;
+	overflow: auto;
+}
+
+@mixin text-like-header {
+	font-family: $header-font-family;
+}
