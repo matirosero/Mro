@@ -90,7 +90,8 @@
 
 			> .overlay {
 				background-color: rgba(map-get($foundation-palette, primary), 0.8);
-				color: $black;
+				// background: url('../img/hero-2.jpg');
+				color: $white;
 				display: block;
 				// opacity: .5;
 				position: absolute;
@@ -119,7 +120,7 @@
 
 			&:hover, &:focus {
 				> .overlay {
-					
+					// background:transparent;
 					background-color: rgba($light-purple, 0.2);
 				}
 				// .overlay-text {
