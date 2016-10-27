@@ -1,5 +1,5 @@
 #hero {
-	background-image: url('../img/hero-2.jpg');
+	// background-image: url('../img/hero-2.jpg');
 	background-size: cover;
 	background-position-x: right;
 	color: $white;
@@ -7,8 +7,8 @@
 	// max-height: 125vw;
 
 	.after & {
-		background: transparent;
-		color: $black;
+		// background: transparent;
+		// color: $black;
 	}
 
 	.hero-container {
@@ -27,7 +27,8 @@
 	}
 
 	#intro {
-		display: none;
+		// display: none;
+		color: $black;
 
 		.after & {
 			display: block;

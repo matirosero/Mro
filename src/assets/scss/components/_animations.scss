@@ -1,0 +1,15 @@
+[data-aos="hero-bg"] {
+  background: url('../img/hero-2.jpg');
+  transition-property: background;
+  &.aos-animate {
+    background: transparent;
+  }
+}
+
+[data-aos="txt-white-to-black"] {
+  color: $white;
+  transition-property: color;
+  &.aos-animate {
+    color: $black;
+  }
+}
