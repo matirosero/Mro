@@ -3,12 +3,12 @@
 	background-size: cover;
 	background-position-x: right;
 	color: $white;
-	height: 90vh;
+	height: 92vh;
 	// max-height: 125vw;
 
 	.after & {
-		// background: transparent;
-		// color: $black;
+		background: transparent;
+		color: $black;
 	}
 
 	.hero-container {
@@ -17,41 +17,37 @@
 
 	#site-title {
 		margin:20px 0 0;
+		
 		span {
 			display: block;
-			// &.name-first {
-			// 	font-family: $body-font-family;
-			// 	text-transform: lowercase;
-			// 	font-weight: 200;
-			// 	padding-left: 3px;
-			// }
-			// &.name-last {
-			// 	font-weight: bold;
-			// 	font-size: 1.5em;
-			// 	text-transform: uppercase;
-			// 	line-height: .5em;
-			// 	margin-bottom: .5em;
-			// }
+		}
+		.after & {
+			padding-bottom: 1rem;
 		}
 	}
 
 	#intro {
 		display: none;
+
+		.after & {
+			display: block;
+		}
 	}
 
 	@include breakpoint(medium) {
 
 		#site-title {
 			background-position: center;
-			margin-top: 5px;
+			margin-top: 1px;
 			padding-left: map-get($grid-column-gutter, small) / 2;
+			padding-bottom: 0;
 
 			float: right;
 			width: 90%;
 			// background-color: red;
 
 			.after & {
-				// width: 40%
+				width: 40%;
 			}
 		}
 
@@ -62,12 +58,13 @@
 
 			// background-color:blue;
 			.after & {
-				// float: left;
+				float: left;
 			}
 		}
 	}
 	@include breakpoint(large) {
 		#site-title {
+			margin-top: 5px;
 			padding-left: map-get($grid-column-gutter, medium);
 			width: 100%;
 		}
@@ -84,14 +81,14 @@
 	}
 	article {
 		text-align: center;
-		margin: 0 0 1px;
+		// margin-bottom: 1px;
 		a {
 			// background-color: map-get($foundation-palette, primary);
 			display: block;
 			position: relative;
 
 			> .overlay {
-				background-color: rgba($light-purple, 0.8);
+				background-color: rgba(map-get($foundation-palette, primary), 0.8);
 				color: $black;
 				display: block;
 				// opacity: .5;
@@ -100,17 +97,29 @@
 				bottom: 0;
 				left: 0;
 				right: 0;
+				@include transition-duration();
+				&.color2 {
+					background-color: rgba($purple-alt1, 0.8);
+				}
+				&.color3 {
+					background-color: rgba($purple-alt2, 0.8);
+				}
+				&.color4 {
+					background-color: rgba($purple-alt3, 0.8);
+				}
 			}
 
 			.overlay-text {
 				@include center-text-vertically;
+				@include transition-duration;
 
 				// display: none;
 			}
 
 			&:hover, &:focus {
 				> .overlay {
-					background-color: rgba(map-get($foundation-palette, primary), 0.8);
+					
+					background-color: rgba($light-purple, 0.2);
 				}
 				// .overlay-text {
 				// 	@include center-text-vertically;
@@ -121,10 +130,9 @@
 			// opacity: .5;
 		}
 		@include breakpoint(medium) {
-			margin: 0 0 1px;
-			padding-right: 1px;
+			// padding-right: 1px;
 			&:last-child {
-				padding-right: 0;
+				// padding-right: 0;
 			}
 		}
 	}

@@ -1,35 +1,53 @@
 #site-title {
-	font-size: 2rem;
+	font-size: 3rem;
 	line-height: 1;
+	
 	.name-first {
 		font-family: $body-font-family;
 		text-transform: lowercase;
 		font-weight: 200;
 		padding-left: 3px;
+		font-size: .67em;
 	}
 	.name-last {
 		font-weight: bold;
-		font-size: 1.5em;
+		// font-size: 1.5em;
+		// font-size: 3rem;
 		text-transform: uppercase;
 		line-height: .5em;
 		margin-bottom: .5em;
 	}
 
 	@include breakpoint(medium) {
-		font-size: 2.25rem;
+		font-size: 3.5rem;
 		.name-first {
 			padding-left:5px;
+			// font-size: 1em;
+		}
+		.name-last {
+			// font-size: 1.5em;
 		}
 	}
 
 	@include breakpoint(large) {
-		font-size: 3.5rem;
+		font-size: 5.25rem;
+		.name-last {
+			// font-size: 1.5em;
+		}
 	}
 }
 
 #intro {
 	@include breakpoint(medium) {
 		text-align: right;
+		h2 {
+			font-size: 2rem;
+		}
+	}
+	@include breakpoint(large) {
+		h2 {
+			font-size: 2.5rem;
+		}
 	}
 }
 
@@ -37,27 +55,37 @@
 	text-align: center;
 	font-size: 1.75rem;
 	line-height: 1;
+	margin-top: 2rem;
 	// padding: 0rem 0 1rem; 0;
 	@include breakpoint(medium) {
 		font-size: 2rem;
+
+		margin-bottom: 1rem;
+		.after & {
+			font-size: 2.25rem;
+		}
 	}
 	@include breakpoint(large) {
 		font-size: 2.5rem;
+		margin-bottom: 1.25rem;
+		.after & {
+			font-size: 2.75rem;
+		}
 	}
 }
 
 .overlay-text {
-	color: map-get($foundation-palette, secondary);
+	color: $white;
 	font-size: 1.25rem;
 	@include text-like-header;
 
 	@include breakpoint(medium) {
 		font-size: 1.50rem;
 	}
-	@include breakpoint(medium) {
-		font-size: 3rem;
+	@include breakpoint(large) {
+		font-size: 2.5rem;
 	}
 	a:hover > .overlay > & {
-		color: $white;
+		color: transparent;
 	}
 }
