@@ -8,9 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>matildeROSERO.com</title>
     <link rel="stylesheet" href="{{root}}assets/css/app.css">
-    <link rel="stylesheet" href="{{root}}assets/aos.css" />
+    <link rel="stylesheet" href="{{root}}assets/animate.min.css" />
     <script src="https://use.typekit.net/bbu7cfj.js"></script>
-    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <script>try{Typekit.load({
+        async: true,
+        active: function() {
+          $('#site-title').addClass('animated fadeIn');
+        },
+      });}catch(e){}</script>
   </head>
   <body>
 
@@ -18,9 +23,6 @@
     {{> body}}
 
     <script src="{{root}}assets/js/app.js"></script>
-    <script src="{{root}}assets/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
+    <script src="{{root}}assets/jquery.waypoints.js"></script>
   </body>
 </html>

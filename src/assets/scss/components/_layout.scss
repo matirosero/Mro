@@ -2,7 +2,7 @@
 #hero {
 	// 
 	color: $white;
-	height: 92vh;
+	height: 90vh;
 	position: relative;
 	// max-height: 125vw;
 
@@ -30,7 +30,9 @@
 
 	#site-title {
 		margin:20px 0 0;
-		
+		@include hide-animated;
+		@include transition-duration();
+
 		span {
 			display: block;
 		}
@@ -42,6 +44,7 @@
 	#intro {
 		// display: none;
 		color: $black;
+		@include hide-animated;
 
 		.after & {
 			display: block;
@@ -49,7 +52,7 @@
 	}
 
 	@include breakpoint(medium) {
-
+		height: 92vh;
 		#site-title {
 			background-position: center;
 			margin-top: 1px;

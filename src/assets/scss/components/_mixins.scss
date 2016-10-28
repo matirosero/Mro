@@ -26,3 +26,7 @@
 	-o-transition-duration: $duration;
 	transition-duration: $duration;
 }
+
+@mixin hide-animated {
+	opacity:0;
+}
