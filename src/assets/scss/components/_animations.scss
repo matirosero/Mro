@@ -10,6 +10,24 @@
   }
 }
 
+[data-aos="disappear"] {
+  opacity: 1;
+  transition-property: opacity;
+  &.aos-animate {
+    opacity: 0;
+  }
+}
+
+[data-aos="title-move"] {
+  // width: 90%;
+  color: $white;
+  transition-property: color;
+  &.aos-animate {
+    // width: 40%;
+    color: $black;
+  }
+}
+
 [data-aos="txt-white-to-black"] {
   color: $white;
   transition-property: color;

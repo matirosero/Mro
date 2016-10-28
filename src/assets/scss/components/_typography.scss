@@ -1,3 +1,7 @@
+body {
+	font-family: 'mplus-1m';
+}
+
 #site-title {
 	font-size: 3rem;
 	line-height: 1;
@@ -89,4 +93,12 @@
 	a:hover > .overlay > & {
 		color: transparent;
 	}
+}
+
+#project-title {
+	@include breakpoint(medium) {
+		text-align: right;
+	}
+}
+#project-summary {
 }
