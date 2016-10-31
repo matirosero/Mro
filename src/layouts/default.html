@@ -13,7 +13,9 @@
     <script>try{Typekit.load({
         async: true,
         active: function() {
-          $('#site-title').addClass('animated fadeIn');
+          $('#site-title, .load-fadein').addClass('animated fadeIn');
+          $('#project-title').addClass('animated fadeInLeft');
+          $('#project-summary').addClass('animated fadeInRight');
         },
       });}catch(e){}</script>
   </head>

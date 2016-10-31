@@ -61,6 +61,11 @@ body {
 	line-height: 1;
 	margin-top: 2rem;
 
+	#portfolio & {
+		color: $light-gray;
+		@include transition-duration();
+	}
+
 	// padding: 0rem 0 1rem; 0;
 	@include breakpoint(medium) {
 		font-size: 2rem;
